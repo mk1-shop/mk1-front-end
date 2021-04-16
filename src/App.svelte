@@ -1,11 +1,20 @@
 <script>
-  import Header from "./components/Header.svelte";
-  import Example from "./components/example.svelte";
+	import Header from "./components/Header.svelte";
+	import Products from './components/Products.svelte';
+	import AddProduct from './components/AddProduct.svelte';
+
+	import seed from './api/seedProduct';
+	import { onMount } from 'svelte';
+	
+	onMount(async () => {
+		// seed.SyncProduct(19);
+	});
 </script>
 
 <main>
-  <Header />
-  <Example message={42} />
+	<Header />
+ 	<Products/>
+ 	<AddProduct/>
 </main>
 
 <style global>

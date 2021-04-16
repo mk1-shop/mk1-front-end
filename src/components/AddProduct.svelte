@@ -7,7 +7,6 @@
 	let productImage;
 	let price;
 
-
 	onMount(async (product) => {
 		
 	});
