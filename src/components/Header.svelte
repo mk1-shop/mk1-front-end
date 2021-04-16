@@ -1,6 +1,5 @@
 <script>
-	import Cart from './Cart.svelte';
-
+  import Cart from "./Cart.svelte";
 </script>
 
 <main>
@@ -9,9 +8,8 @@
       <input type="text" class="search" />
     </div>
     <i class="fas fa-hat-wizard" />
-	
-	<Cart />
 
+    <Cart />
   </header>
 </main>
 
@@ -22,7 +20,7 @@
   header {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     height: 5vh;
     left: 0;
     background-color: #1e2022;
