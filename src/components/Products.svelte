@@ -17,9 +17,9 @@
 </script>
 
 <main>
-  <ul class="container mx-auto grid grid-cols-4 gap-12">
+  <ul class="container mx-auto grid grid-cols-4 gap-12 mt-12">
     {#each productList as product}
-      <div class="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden my-10">
+      <div class="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden ">
         <div class="px-4 py-2">
           <h1 class="text-gray-900 text-center font-bold text-lg uppercase h-8 overflow-hidden">
             {product.productName}
