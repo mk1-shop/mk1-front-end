@@ -1,5 +1,5 @@
 <script>
-	import Cart from './components/Cart.svelte';
+	import Cart from './Cart.svelte';
 
 </script>
 
