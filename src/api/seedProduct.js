@@ -19,10 +19,10 @@ const SyncProduct = async (number) => {
 	productList.forEach(async(product) => {
 		try {
 			let temp = {
-			"productName": product.title,
+			"name": product.title,
 			"description": product.description,
 			"price": product.price,
-			"productImage": product.image
+			"image": product.image
 		}
 			const response = addProduct(temp)
 			return response;

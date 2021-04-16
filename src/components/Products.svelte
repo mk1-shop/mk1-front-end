@@ -22,12 +22,12 @@
       <div class="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden ">
         <div class="px-4 py-2">
           <h1 class="text-gray-900 text-center font-bold text-lg uppercase h-8 overflow-hidden">
-            {product.productName}
+            {product.name}
           </h1>
         </div>
         <img
           class="h-56 w-full object-cover mt-2"
-          src={product.productImage}
+          src={product.image}
           alt=""
         />
         <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
