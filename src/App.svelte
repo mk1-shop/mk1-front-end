@@ -9,15 +9,27 @@
 	onMount(async () => {
 		// seed.SyncProduct(19);
 	});
+
+	import routes from './routes';
+
+	import Router from 'svelte-spa-router'
+	import { link } from 'svelte-spa-router'
 </script>
 
-	<Header />
-	
-	<main>
-		<Products />
-		<AddProduct />
-		<Footer />
-	</main>
+<Header />
+
+<a href="/" use:link class="inline-block px-10 m-10">Home</a>
+
+<a href="/contact" use:link class="inline-block px-10 m-10">Contact</a>
+<a href="/about" use:link class="inline-block px-10 m-10">About</a>
+
+<hr>
+
+<main>
+	<Router {routes}/>
+</main>
+
+<Footer />
 
 <style global>
 	@tailwind base;

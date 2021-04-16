@@ -20,7 +20,7 @@ export const addProduct = async (product) => {
 
 export const getProductbyID = async (number) => {
     try {
-		const response = await Api.get(`/products/all`);
+		const response = await Api.get(`/products/find/${number}`);
 		return response;
     } catch (error) {
 		console.error(error);
