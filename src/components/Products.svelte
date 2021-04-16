@@ -21,14 +21,9 @@
     {#each productList as product}
       <div class="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden my-10">
         <div class="px-4 py-2">
-          <h1
-            class="text-gray-900 font-bold text-2xl uppercase h-8 overflow-hidden"
-          >
+          <h1 class="text-gray-900 text-center font-bold text-lg uppercase h-8 overflow-hidden">
             {product.productName}
           </h1>
-          <p class="text-gray-600 text-sm mt-1 h-24 overflow-scroll">
-            {product.description}
-          </p>
         </div>
         <img
           class="h-56 w-full object-cover mt-2"
