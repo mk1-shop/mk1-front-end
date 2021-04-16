@@ -1,12 +1,17 @@
 <script>
+	import Cart from './components/Cart.svelte';
+
 </script>
 
 <main>
   <header>
-    <div class="search-bar">
+    <div class="search-bar flex-auto">
       <input type="text" class="search" />
     </div>
     <i class="fas fa-hat-wizard" />
+	
+	<Cart />
+
   </header>
 </main>
 

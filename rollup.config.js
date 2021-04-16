@@ -6,6 +6,9 @@ import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import sveltePreprocess from 'svelte-preprocess'
 
+import {config} from 'dotenv';
+import replace from '@rollup/plugin-replace';
+
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -58,6 +61,19 @@ export default {
 			browser: true,
 			dedupe: ['svelte']
 		}),
+
+
+		replace({
+			preventAssignment: true,     
+			__myapp: JSON.stringify({
+				env: {
+					isProd: production,
+					...config().parsed
+				}
+			}),
+		}),
+
+
 		commonjs(),
 
 		// In dev mode, call `npm run start` once
