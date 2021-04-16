@@ -7,7 +7,7 @@
   import { onMount } from "svelte";
 
   onMount(async () => {
-    // seed.SyncProduct(19);
+    //seed.SyncProduct(19);
   });
 </script>
 

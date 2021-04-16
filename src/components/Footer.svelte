@@ -1,4 +1,4 @@
-<footer>
+<footer class="py-4">
   <p>A Creation by Bacari, Zac, Miguel and Santiago!</p>
   <p>
     Visit the <a href="https://trello.com/b/Sfg4uYY6/mk1">Trello Board</a> to check
@@ -11,7 +11,7 @@
     bottom: 0;
     text-align: center;
     width: 100%;
-    height: 5vh;
+    height: auto;
     background-color: grey;
   }
 
