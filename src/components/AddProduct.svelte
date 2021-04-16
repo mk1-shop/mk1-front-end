@@ -22,13 +22,11 @@
 	}
 </script>
 
-<main>
-	<form class="container mx-auto p-8 bg-gray-200 my-4 rounded-lg pt-0">
-		<p class="text-center text-lg py-6">Add Product</p>
-		<input type="text" placeholder="name" class="block p-2 shadow-md w-full mb-8">
-		<input type="text" placeholder="description" class="block p-2 shadow-md w-full mb-8">
-		<input type="text" placeholder="image" class="block p-2 shadow-md w-full mb-8">
-		<input type="text" placeholder="price" class="block p-2 shadow-md w-full mb-8">
-		<button class="bg-green-400 text-white p-4 w-full">Add Product</button>
-	</form>
-</main>
+<form class="container mx-auto p-8 bg-gray-200 my-4 rounded-lg pt-0">
+	<p class="text-center text-lg py-6">Add Product</p>
+	<input type="text" placeholder="name" class="block p-2 shadow-md w-full mb-8">
+	<input type="text" placeholder="description" class="block p-2 shadow-md w-full mb-8">
+	<input type="text" placeholder="image" class="block p-2 shadow-md w-full mb-8">
+	<input type="text" placeholder="price" class="block p-2 shadow-md w-full mb-8">
+	<button class="bg-green-400 text-white p-4 w-full">Add Product</button>
+</form>
