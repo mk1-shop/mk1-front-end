@@ -24,13 +24,13 @@
 <Footer />
 
 <style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
 
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+		}
+	}
 </style>

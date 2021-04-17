@@ -19,7 +19,7 @@
         </h1></a
       >
     </div>
-    <img class="h-56 w-full object-cover mt-2" src={product.image} alt="" />
+    <img class="h-56 w-full object-contain mt-2 bg-white p-4" src={product.image} alt="" />
     <div class="flex items-center justify-between px-4 py-2 bg-gray-900">
       <h1 class="text-gray-200 font-bold text-xl">${product.price}</h1>
       <button
