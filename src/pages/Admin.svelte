@@ -82,7 +82,7 @@
 								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
 								<img class="h-10 w-10" src="{product.image}" alt="">
 								</td>
-								<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+								<td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
 									<button on:click={toggleEditProduct(product.id)}  class="bg-yellow-600 text-white p-4 mx-auto w-48 inline-block">Edit</button>
 									<button on:click={deleteProductButton(product.id)} class="bg-red-600 text-white p-4 mx-auto w-48 inline-block">Delete</button>
 								</td>
