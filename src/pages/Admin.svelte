@@ -1,11 +1,13 @@
 <script>
 	import AddProduct from "../components/AddProduct.svelte";
+	import UpdateProduct from "../components/UpdateProduct.svelte";
 	import { onMount } from "svelte";
   	import { getProducts,deleteProduct } from "../api/product";
 	import seed from "../api/seedProduct";
 
   	let productList = [];
   	let toggle = false
+	let toggleEdit;
 
 	onMount(async () => {
 		const res = await getProducts();
@@ -25,6 +27,13 @@
 		toggle = !toggle;
 	}
 
+	const toggleEditProduct = async (id) => {
+		if (toggleEdit == id) {
+			toggleEdit = 0
+		}else{
+			toggleEdit = id;
+		}
+	}
 </script>
 
 
@@ -74,10 +83,18 @@
 								<img class="h-10 w-10" src="{product.image}" alt="">
 								</td>
 								<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-									<button  class="text-indigo-600 hover:text-indigo-900">Edit</button>
-									<button on:click={deleteProductButton(product.id)} class="text-red-600 hover:text-red-900">Delete</button>
+									<button on:click={toggleEditProduct(product.id)}  class="bg-yellow-600 text-white p-4 mx-auto w-48 inline-block">Edit</button>
+									<button on:click={deleteProductButton(product.id)} class="bg-red-600 text-white p-4 mx-auto w-48 inline-block">Delete</button>
 								</td>
 							</tr>
+							{#if toggleEdit == product.id}
+							<tr class="bg-gray-50"> 
+								<td colspan="4"> 
+									<UpdateProduct product={product} />
+								</td>
+							</tr>
+							{/if}
+
 							{/each}
 						</tbody>
 					</table>

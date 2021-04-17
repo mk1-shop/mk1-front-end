@@ -27,7 +27,14 @@ export const getProductbyID = async (number) => {
     }
 };
 
-
+export const updateProduct = async (product) => {
+    try {
+		const response = await Api.put(`/products/update`,product);
+		return response;
+    } catch (error) {
+		console.error(error);
+    }
+};
 
 export const deleteProduct = async (id) => {
     try {
