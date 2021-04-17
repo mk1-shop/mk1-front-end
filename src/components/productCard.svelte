@@ -11,9 +11,9 @@
 
 <div class="max-w-xs bg-gray-900 shadow-lg rounded-lg overflow-hidden">
     <div class="px-4 py-2">
-      <a href="/product/{product.id}" use:link class="inline-block px-10 m-2">
+      <a href="/product/{product.id}" use:link >
         <h1
-          class=" text-center font-bold text-lg uppercase h-8 overflow-hidden text-white"
+          class="font-bold text-sm uppercase  truncate m-2 text-white"
         >
           {product.name}
         </h1></a
