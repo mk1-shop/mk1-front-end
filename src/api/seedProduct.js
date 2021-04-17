@@ -30,6 +30,8 @@ const SyncProduct = async (number) => {
 			console.error(error);
 	    }
 	})
+
+	location.reload();
 };
 
 export default {

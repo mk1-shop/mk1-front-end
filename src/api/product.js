@@ -26,3 +26,14 @@ export const getProductbyID = async (number) => {
 		console.error(error);
     }
 };
+
+
+
+export const deleteProduct = async (id) => {
+    try {
+		const response = await Api.delete(`/products/delete/${id}`);
+		return response;
+    } catch (error) {
+		console.error(error);
+    }
+};
