@@ -13,6 +13,12 @@
 		console.log(product);
 	});
 
+	import cart from "../store/cart";
+
+	const addCart = (product) => {
+		cart.addProduct(product, "add");
+	};
+
 
 </script>
 
