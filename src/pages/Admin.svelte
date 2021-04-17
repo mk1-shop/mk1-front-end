@@ -5,6 +5,7 @@
 	import seed from "../api/seedProduct";
 
   	let productList = [];
+  	let toggle = false
 
 	onMount(async () => {
 		const res = await getProducts();
@@ -20,13 +21,24 @@
     	seed.SyncProduct(19);
 	}
 
+	const toggleAddProduct = async () => {
+		toggle = !toggle;
+	}
+
 </script>
 
 
-<button on:click={seedDB} class="bg-blue-400 text-white p-4 mx-auto w-48 block"> Seed DB </button>
+<div class="text-center">
+	<button on:click={seedDB} class="bg-blue-400 text-white p-4 mx-auto w-48 inline-block"> Seed DB </button>
 
+	<button on:click={toggleAddProduct} class="bg-green-400 text-white p-4 mx-auto w-48 inline-block"> Add Product </button>
+
+</div>
+
+
+{#if toggle}
 <AddProduct />
-
+{/if}
 <div class="container mx-auto my-4">
 	<div class="flex flex-col">
 		<div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
