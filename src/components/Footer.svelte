@@ -1,3 +1,5 @@
+<script></script>
+
 <footer class="py-4">
 	<p>A Creation by Bacari, Zac, Miguel and Santiago!</p>
 	<p>Visit the <a href="https://trello.com/b/Sfg4uYY6/mk1">Trello Board</a> to check out our progress.</p>
@@ -9,11 +11,11 @@
 		text-align: center;
 		width: 100%;
 		height: auto;
-		background-color: grey;
+		background-color: #1e2022;
 	}
 
 	p {
-		color: #06fd1a;
+		color: #111827;
 		font-size: 1em;
 		font-weight: 100;
 	}
