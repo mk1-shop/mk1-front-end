@@ -2,8 +2,7 @@ import NotFound from './pages/NotFound.svelte'
 import About from './pages/About.svelte'
 import Contact from './pages/Contact.svelte'
 import Home from './pages/Home.svelte'
-
-
+import Admin from './pages/Admin.svelte'
 import ViewProduct from './pages/ViewProduct.svelte'
 
 
@@ -15,6 +14,8 @@ export default {
     '/contact': Contact,
 
     '/about': About,
+    '/admin': Admin,
+
 
     '/product/:id': ViewProduct,
 

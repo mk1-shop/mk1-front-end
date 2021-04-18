@@ -1,8 +1,8 @@
 import Api from "../services/axios";
 
-export const getProducts = async (number) => {
+export const getProducts = async (direction,sortby) => {
     try {
-		const response = await Api.get(`/products/all`);
+		const response = await Api.get(`/products/all?direction=${direction}&orderBy=${sortby}`);
 		return response;
     } catch (error) {
 		console.error(error);
@@ -21,6 +21,24 @@ export const addProduct = async (product) => {
 export const getProductbyID = async (number) => {
     try {
 		const response = await Api.get(`/products/find/${number}`);
+		return response;
+    } catch (error) {
+		console.error(error);
+    }
+};
+
+export const updateProduct = async (product) => {
+    try {
+		const response = await Api.put(`/products/update`,product);
+		return response;
+    } catch (error) {
+		console.error(error);
+    }
+};
+
+export const deleteProduct = async (id) => {
+    try {
+		const response = await Api.delete(`/products/delete/${id}`);
 		return response;
     } catch (error) {
 		console.error(error);

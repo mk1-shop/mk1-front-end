@@ -1,40 +1,41 @@
 <script>
-	import { onMount } from "svelte";
-	import { getProducts } from "../api/product";
+  import { onMount } from "svelte";
+  import { getProducts } from "../api/product";
+  import productCard from "./ProductCard.svelte";
 
-	let productList = [];
+  let productList = [];
+  let direction = "desc";
+  let sortby = "price";
+  let selected;
+  onMount(async () => {
+    const res = await getProducts(direction,sortby);
+    productList = res;
+  });
 
-	onMount(async () => {
-		const res = await getProducts();
-		productList = res;
-	});
+  let sort = async () => {
+  	if (direction == "desc") {
+  		direction = "asc"
+  	}else{
+  		direction = "desc";
+  	}
+    const res = await getProducts(direction,sortby);
+    productList = res;
+    console.log("sorting");
+  }
 
-	import cart from "../store/cart";
-
-	const addCart = (product) => {
-		cart.addProduct(product, "add");
-	};
-
-	import { link } from 'svelte-spa-router'
-
-
+  import ProductCard from "./productCard.svelte";
 </script>
 
-<ul class="container mx-auto grid grid-cols-4 gap-12 mt-12">
-	{#each productList as product}
-		<div class="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden">
-			<div class="px-4 py-2">
+<div class="text-center">
+<p class="bg-blue-400 text-white p-4 mx-auto w-48 inline-block"> Sort by: 
+	<select bind:value={selected} on:change="{sort}" class="text-black">
+		<option value="name">Name</option>
+		<option value="price">Price</option>
+	</select>
+ </p>
+<button on:click={sort} class="bg-blue-400 text-white p-4 mx-auto w-48 inline-block"> Order by: {direction} </button>
+</div>
 
-				<a href="/product/{product.id}" use:link class="inline-block px-10 m-10">
-					<h1 class="text-gray-900 text-center font-bold text-lg uppercase h-8 overflow-hidden">
-					{product.name}
-				</h1></a>
-			</div>
-			<img class="h-56 w-full object-cover mt-2" src={product.image} alt=""/>
-			<div class="flex items-center justify-between px-4 py-2 bg-gray-900">
-				<h1 class="text-gray-200 font-bold text-xl">${product.price}</h1>
-				<button class="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded" on:click={addCart(product)}>Add to card</button>
-			</div>
-		</div>
-	{/each}
+<ul class="container mx-auto grid grid-cols-4 gap-12 my-12">
+  {#each productList as product}<ProductCard {product} />{/each}
 </ul>

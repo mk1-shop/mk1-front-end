@@ -1,32 +1,24 @@
 <script>
-	import Header from "./components/Header.svelte";
-	import Products from "./components/Products.svelte";
-	import AddProduct from "./components/AddProduct.svelte";
-	import Footer from "./components/Footer.svelte";
-	import seed from "./api/seedProduct";
-	import { onMount } from "svelte";
+  import Header from "./components/Header.svelte";
+  import Products from "./components/Products.svelte";
+  import AddProduct from "./components/AddProduct.svelte";
+  import Footer from "./components/Footer.svelte";
+  import Navigation from "./components/Navigation.svelte";
 
-	onMount(async () => {
-		// seed.SyncProduct(19);
-	});
+  import { onMount } from "svelte";
 
-	import routes from './routes';
+  onMount(async () => {
+  });
 
-	import Router from 'svelte-spa-router'
-	import { link } from 'svelte-spa-router'
+  import routes from "./routes";
+
+  import Router from "svelte-spa-router";
 </script>
 
 <Header />
-
-<a href="/" use:link class="inline-block px-10 m-10">Home</a>
-
-<a href="/contact" use:link class="inline-block px-10 m-10">Contact</a>
-<a href="/about" use:link class="inline-block px-10 m-10">About</a>
-
-<hr>
-
+<Navigation/>
 <main>
-	<Router {routes}/>
+  <Router {routes} />
 </main>
 
 <Footer />
@@ -38,7 +30,7 @@
 
 	@media (min-width: 640px) {
 		main {
-		  max-width: none;
+			max-width: none;
 		}
 	}
 </style>
