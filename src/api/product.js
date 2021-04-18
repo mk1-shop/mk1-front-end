@@ -1,8 +1,8 @@
 import Api from "../services/axios";
 
-export const getProducts = async (number) => {
+export const getProducts = async (direction,sortby) => {
     try {
-		const response = await Api.get(`/products/all`);
+		const response = await Api.get(`/products/all?direction=${direction}&orderBy=${sortby}`);
 		return response;
     } catch (error) {
 		console.error(error);

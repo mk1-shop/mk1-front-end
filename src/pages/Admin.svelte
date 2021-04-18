@@ -10,7 +10,7 @@
 	let toggleEdit;
 
 	onMount(async () => {
-		const res = await getProducts();
+		const res = await getProducts(direction,sortby);
 		productList = res;
 	});
 
@@ -34,6 +34,24 @@
 			toggleEdit = id;
 		}
 	}
+	let direction = "desc";
+
+	let sortby = "price";
+	let selected;
+
+	let sort = async () => {
+  	if (direction == "desc") {
+  		direction = "asc"
+  	}else{
+  		direction = "desc";
+  	}
+    const res = await getProducts(direction,sortby);
+    productList = res;
+    console.log("sorting");
+  }
+
+
+
 </script>
 
 
@@ -41,7 +59,16 @@
 	<button on:click={seedDB} class="bg-blue-400 text-white p-4 mx-auto w-48 inline-block"> Seed DB </button>
 
 	<button on:click={toggleAddProduct} class="bg-green-400 text-white p-4 mx-auto w-48 inline-block"> Add Product </button>
+</div>
 
+<div class="text-right container mx-auto">
+<p class="bg-blue-400 text-white p-4 mx-auto w-48 inline-block"> Sort by: 
+	<select bind:value={selected} on:change="{sort}" class="text-black">
+		<option value="name">Name</option>
+		<option value="price">Price</option>
+	</select>
+ </p>
+<button on:click={sort} class="bg-blue-400 text-white p-4 mx-auto w-48 inline-block"> Order by: {direction} </button>
 </div>
 
 
