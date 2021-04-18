@@ -6,6 +6,10 @@
   const addCart = (product) => {
     cart.addProduct(product, "add");
   };
+
+  const addCartNotification = () => {
+    //function to be called to alert of something added to cart
+  };
 </script>
 
 <div class="max-w-xs bg-gray-900 shadow-lg rounded-lg overflow-hidden">
