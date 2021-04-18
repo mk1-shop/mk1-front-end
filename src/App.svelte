@@ -3,27 +3,20 @@
   import Products from "./components/Products.svelte";
   import AddProduct from "./components/AddProduct.svelte";
   import Footer from "./components/Footer.svelte";
-  import seed from "./api/seedProduct";
+  import Navigation from "./components/Navigation.svelte";
+
   import { onMount } from "svelte";
 
   onMount(async () => {
-    //seed.SyncProduct(19);
   });
 
   import routes from "./routes";
 
   import Router from "svelte-spa-router";
-  import { link } from "svelte-spa-router";
 </script>
 
 <Header />
-
-<a href="/" use:link class="inline-block px-5 m-3">Home</a>
-<a href="/contact" use:link class="inline-block px-5 m-3">Contact</a>
-<a href="/about" use:link class="inline-block px-5 m-3">About</a>
-
-<hr />
-
+<Navigation/>
 <main>
   <Router {routes} />
 </main>
@@ -31,13 +24,13 @@
 <Footer />
 
 <style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
 
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
+	@media (min-width: 640px) {
+		main {
+			max-width: none;
+		}
+	}
 </style>

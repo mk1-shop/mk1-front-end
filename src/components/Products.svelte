@@ -13,6 +13,6 @@
   import ProductCard from "./productCard.svelte";
 </script>
 
-<ul class="container mx-auto grid grid-cols-4 gap-12 mt-12">
+<ul class="container mx-auto grid grid-cols-4 gap-12 my-12">
   {#each productList as product}<ProductCard {product} />{/each}
 </ul>
