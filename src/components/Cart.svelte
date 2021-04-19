@@ -41,7 +41,7 @@
 	{/if}
 	
 	{#each $cart as product, i}
-		<li>{i} <p class="truncate w-auto">{product.name} </p>
+		<li><p class="truncate w-auto">{product.name} </p>
 			<button on:click={deleteProduct(product)} class="bg-red-400 text-red p-4 w-full text-white">Delete</button>
 		</li>
 	{/each}
