@@ -16,11 +16,7 @@
         clip-rule="evenodd"
       />
     </svg>
-    <input
-      type="text"
-      class="search inline-block w-auto"
-      placeholder=" search..."
-    />
+    <input type="text" class="search inline-block w-auto" />
   </div>
 
   <p id="logo">Mark-1</p>
@@ -47,5 +43,8 @@
     color: white;
     text-align: center;
     right: 5%;
+  }
+  .cart-icon {
+    align-items: right;
   }
 </style>

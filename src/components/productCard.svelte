@@ -2,25 +2,16 @@
   export let product;
   import { link } from "svelte-spa-router";
   import cart from "../store/cart";
-<<<<<<< HEAD
-  import CartNotification from "./CartNotification.svelte";
-=======
-  import { createEventDispatcher } from 'svelte';
-
-  const dispatch = createEventDispatcher();
->>>>>>> 449708fb55083b3543c03c3a51c67705d6912f9f
 
   const addCart = (product) => {
     cart.addProduct(product, "add");
-
-    dispatch('message', {
-		show: true
-	});
   };
 
+  const addCartNotification = () => {
+    //function to be called to alert of something added to cart
+  };
 </script>
 
-<CartNotification />
 <div class="max-w-xs bg-gray-900 shadow-lg rounded-lg overflow-hidden">
   <div class="px-4 py-2">
     <a href="/product/{product.id}" use:link>
