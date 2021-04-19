@@ -12,10 +12,10 @@ const addProduct = (tempProduct, type) => update(cart => {
 		let check = temp.filter(product => product.id != tempProduct.id)
 		if (check.length < temp.length) {
 			return cart
-		}else{
+		} else {
 			return [...cart, tempProduct];
 		}
-	}else {
+	} else {
 		return temp.filter(product => product.id != tempProduct.id);
 	}
 
@@ -29,4 +29,4 @@ export default {
 	subscribe,
 	addProduct,
 	reset,
- }
+}

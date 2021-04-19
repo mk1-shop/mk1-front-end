@@ -33,6 +33,6 @@
 
 <style>
   #addedToCart {
-    display: none; /* if add to cart button is clicked on the product card change to flex */
+    display: flex; /* if add to cart button is clicked on the product card change to flex */
   }
 </style>

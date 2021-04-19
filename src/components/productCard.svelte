@@ -2,6 +2,7 @@
   export let product;
   import { link } from "svelte-spa-router";
   import cart from "../store/cart";
+  import CartNotification from "./CartNotification.svelte";
 
   const addCart = (product) => {
     cart.addProduct(product, "add");
@@ -12,6 +13,7 @@
   };
 </script>
 
+<CartNotification />
 <div class="max-w-xs bg-gray-900 shadow-lg rounded-lg overflow-hidden">
   <div class="px-4 py-2">
     <a href="/product/{product.id}" use:link>
