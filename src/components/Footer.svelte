@@ -1,6 +1,6 @@
 <script></script>
 
-<footer class="py-4">
+<footer class="py-4 font-bold">
   <p>A Creation by Bacari, Zac, Miguel and Santiago!</p>
   <p>
     Visit the <a class= "hover:underline text-blue-200 hover:text-blue-50" href="https://trello.com/b/Sfg4uYY6/mk1">Trello Board</a> to check
@@ -20,7 +20,6 @@
   p {
     color: #fff;
     font-size: 1em;
-    font-weight: 100;
   }
 
 
