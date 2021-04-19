@@ -50,5 +50,5 @@ import CartNotification from "./CartNotification.svelte"
 </div>
 
 <ul class="container mx-auto grid grid-cols-4 gap-12 my-12">
-  {#each productList as product}<ProductCard {product} } on:message={notify} />{/each}
+  {#each productList as product}<ProductCard {product} on:message={notify} />{/each}
 </ul>
