@@ -1,30 +1,21 @@
 <script>
-  /*
-    //how we would maybe do this
-    //we have a hidden element that when add to cart is clicked becomes visible
-    //after x amount of time the element is hidden again
-    //make alert stick to position if scrolled NOTE could do something similar for header/menubar to keep sticky
+  import { onMount } from "svelte";
+  import { createEventDispatcher } from "svelte";
 
-     const addedToCart = document.getElementById("addedToCart") //this syntax will not work with svelte
-     sticky = addedToCart.offsetBottom; //we want this do be displayed at the bottom no matter where we scroll on page
-     function stickyCartAlert() {
-        //changes from a hidden element to displayed element
-        addedToCart.style = "display: flex"
+  const dispatch = createEventDispatcher();
 
-        if(window.pageYOffset >= sticky){
-            addedToCart.classList.add()
-        }
-        //after 1.5 second the alert is hidden again
-        setTimeout(() => {
-            addedToCart.style = "display: none;"
-        }, 1500);
-    }
-    */
+  onMount(async () => {
+    setTimeout(() => {
+      dispatch("message", {
+        show: false,
+      });
+    }, 1500);
+  });
 </script>
 
 <div
   id="addedToCart"
-  class="bg-teal-100 border border-green-400 text-green-700 px-4 py-3 rounded fixed-bottom"
+  class="bg-teal-100 border border-green-400 text-green-700 px-4 py-3 rounded fixed top-8 right-10 bg-white"
   role="alert"
 >
   <strong class="font-bold">Success!</strong>
@@ -32,7 +23,4 @@
 </div>
 
 <style>
-  #addedToCart {
-    display: flex; /* if add to cart button is clicked on the product card change to flex */
-  }
 </style>
