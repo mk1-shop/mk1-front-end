@@ -3,7 +3,7 @@
 <footer class="py-4">
   <p>A Creation by Bacari, Zac, Miguel and Santiago!</p>
   <p>
-    Visit the <a class= "hover:underline" href="https://trello.com/b/Sfg4uYY6/mk1">Trello Board</a> to check
+    Visit the <a class= "hover:underline text-blue-200 hover:text-blue-50" href="https://trello.com/b/Sfg4uYY6/mk1">Trello Board</a> to check
     out our progress.
   </p>
 </footer>
@@ -23,7 +23,5 @@
     font-weight: 100;
   }
 
-  a{
-    color: blue;
-  }
+
 </style>
