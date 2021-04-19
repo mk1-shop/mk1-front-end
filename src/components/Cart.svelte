@@ -1,5 +1,6 @@
 <script>
 	import cart from "../store/cart";
+	import { fade } from 'svelte/transition';
 	
 	let showCart = false;
 
@@ -26,8 +27,6 @@
 	});
 
 	let condition = false;
-
-
 </script>
 
 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-4 text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" on:click={toggleCart}>
@@ -40,7 +39,7 @@
 
 {#if showCart}
 
-<div class="fixed right-10 top-20 bg-gray-200 shadow-md">
+<div class="fixed right-10 top-20 bg-gray-200 shadow-md" transition:fade="{{delay: 250, duration: 300}}">
 	<ul class=" py-4 px-12">
 	{#if $cart.length == 0}
 		<p>Empty</p>

@@ -3,7 +3,7 @@
   import { getProducts } from "../api/product";
   import productCard from "./ProductCard.svelte";
   import CartNotification from "./CartNotification.svelte"
-	import { fade } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
 
   let productList = [];
   let direction = "desc";
