@@ -34,14 +34,14 @@
 
 {#if showCart}
 
-<div class="fixed right-10 top-20 bg-gray-200 shadow-md" transition:fade="{{delay: 250, duration: 300}}">
+<div class="fixed right-10 top-20 bg-gray-200 shadow-md w-96" transition:fade="{{delay: 250, duration: 300}}">
 	<ul class=" py-4 px-12">
 	{#if $cart.length == 0}
 		<p>Empty</p>
 	{/if}
 	
 	{#each $cart as product, i}
-		<li>{i} {product.name} 
+		<li>{i} <p class="truncate w-auto">{product.name} </p>
 			<button on:click={deleteProduct(product)} class="bg-red-400 text-red p-4 w-full text-white">Delete</button>
 		</li>
 	{/each}
