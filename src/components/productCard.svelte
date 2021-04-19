@@ -2,14 +2,18 @@
   export let product;
   import { link } from "svelte-spa-router";
   import cart from "../store/cart";
+  import { createEventDispatcher } from 'svelte';
+  
+  const dispatch = createEventDispatcher();
 
   const addCart = (product) => {
     cart.addProduct(product, "add");
+    dispatch('message', {
+		show: true
+	});
   };
 
-  const addCartNotification = () => {
-    //function to be called to alert of something added to cart
-  };
+
 </script>
 
 <div class="max-w-xs bg-gray-900 shadow-lg rounded-lg overflow-hidden">

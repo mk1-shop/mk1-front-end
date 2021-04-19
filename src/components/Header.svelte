@@ -16,7 +16,7 @@
         clip-rule="evenodd"
       />
     </svg>
-    <input type="text" class="search inline-block w-auto" />
+    <input type="text" class="search inline-block w-auto" placeholder=" search..." />
   </div>
 
   <p id="logo">Mark-1</p>
