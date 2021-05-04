@@ -31,7 +31,7 @@ function serve() {
 		}
 	};
 }
-console.log(process.env)
+// console.log(process.env)
 export default {
 	input: 'src/main.js',
 	output: {
