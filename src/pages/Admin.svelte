@@ -20,7 +20,11 @@
 	};
 
 	const seedDB = async () => {
-    	seed.SyncProduct(19);
+		if (productList.length < 30) {
+			seed.SyncProduct(19);
+		}else{
+			alert("seeding limit reach for demo")
+		}
 	}
 
 	const toggleAddProduct = async () => {
