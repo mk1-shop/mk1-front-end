@@ -32,6 +32,26 @@ function serve() {
 	};
 }
 // console.log(process.env)
+
+
+const env = () => {
+	if(process.env.API_URL){
+		return {
+			isProd: production,
+			SEDDAPI_URL: process.env.SEDDAPI_URL,
+			API_URL: process.env.API_URL,
+		} 
+	}else{
+		return {
+			isProd: production,
+			...config().parsed
+		}
+	}
+}
+
+
+// console.log(env());
+
 export default {
 	input: 'src/main.js',
 	output: {
@@ -67,10 +87,11 @@ export default {
 			preventAssignment: true,     
 			process: JSON.stringify({
 				env: {
-					isProd: production,
-					SEDDAPI_URL: process.env.SEDDAPI_URL,
-					API_URL: process.env.API_URL,
+					// isProd: production,
+					// SEDDAPI_URL: process.env.SEDDAPI_URL,
+					// API_URL: process.env.API_URL,
 					// ...config().parsed
+					...env()
 				}
 			}),
 		}),
