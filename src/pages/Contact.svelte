@@ -1,1 +1,1 @@
-<h1>New Contact</h1>
+<h1 class="text-center">Some contact info to come</h1>

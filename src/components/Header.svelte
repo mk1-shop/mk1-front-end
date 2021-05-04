@@ -16,10 +16,14 @@
         clip-rule="evenodd"
       />
     </svg>
-    <input type="text" class="search inline-block w-auto" placeholder=" search..." />
+    <input
+      type="text"
+      class="search inline-block w-auto"
+      placeholder=" search..."
+    />
   </div>
 
-  <p id="logo">Mark-1</p>
+  <p id="logo" class="text-bold">Mark-1</p>
 
   <div class="justify-self-end"><Cart /></div>
 </header>
