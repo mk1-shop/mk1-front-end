@@ -31,7 +31,7 @@ function serve() {
 		}
 	};
 }
-console.log(config().parsed);
+console.log(process.env)
 export default {
 	input: 'src/main.js',
 	output: {
@@ -68,7 +68,9 @@ export default {
 			process: JSON.stringify({
 				env: {
 					isProd: production,
-					...config().parsed
+					SEDDAPI_URL: process.env.SEDDAPI_URL,
+					API_URL: process.env.API_URL,
+					// ...config().parsed
 				}
 			}),
 		}),

@@ -48,7 +48,5 @@
     text-align: center;
     right: 5%;
   }
-  .cart-icon {
-    align-items: right;
-  }
+
 </style>
