@@ -31,7 +31,7 @@ function serve() {
 		}
 	};
 }
-
+console.log(config().parsed);
 export default {
 	input: 'src/main.js',
 	output: {
