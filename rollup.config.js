@@ -6,7 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import sveltePreprocess from 'svelte-preprocess'
 
-import {config} from 'dotenv';
+import { config } from 'dotenv';
 import replace from '@rollup/plugin-replace';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -63,14 +63,22 @@ export default {
 		}),
 
 
+		// replace({
+		// 	preventAssignment: true,     
+		// 	__myapp: JSON.stringify({
+		// 		env: {
+		// 			isProd: production,
+		// 			...config().parsed
+		// 		}
+		// 	}),
+		// }),
+
 		replace({
-			preventAssignment: true,     
-			__myapp: JSON.stringify({
-				env: {
-					isProd: production,
-					...config().parsed
-				}
-			}),
+			preventAssignment: true,
+			env: JSON.stringify({
+				isProd: production,
+				...config().parsed
+			})
 		}),
 
 
