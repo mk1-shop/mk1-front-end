@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const axiosAPI = axios.create({
-	baseURL: env.API_URL
+	baseURL: process.env.API_URL
 });
 
 const apiRequest = (method, url, request) => {

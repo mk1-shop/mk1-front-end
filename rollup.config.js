@@ -63,23 +63,23 @@ export default {
 		}),
 
 
-		// replace({
-		// 	preventAssignment: true,     
-		// 	__myapp: JSON.stringify({
-		// 		env: {
-		// 			isProd: production,
-		// 			...config().parsed
-		// 		}
-		// 	}),
-		// }),
-
 		replace({
-			preventAssignment: true,
-			env: JSON.stringify({
-				isProd: production,
-				...config().parsed
-			})
+			preventAssignment: true,     
+			process: JSON.stringify({
+				env: {
+					isProd: production,
+					...config().parsed
+				}
+			}),
 		}),
+
+		// replace({
+		// 	preventAssignment: true,
+		// 	env: JSON.stringify({
+		// 		isProd: production,
+		// 		...config().parsed
+		// 	})
+		// }),
 
 
 		commonjs(),

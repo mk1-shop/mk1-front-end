@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const axiosAPI = axios.create({
-	baseURL: env.SEDDAPI_URL
+	baseURL: process.env.SEDDAPI_URL
 });
 
 const apiRequest = (method, url, request) => {
